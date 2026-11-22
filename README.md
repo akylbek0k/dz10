@@ -1,8 +1,8 @@
-# 💬 WebSocket Group Chat — Групповой онлайн-чат с JWT авторизацией
+# 💬 WebSocket Group Chat — Групповой онлайн-чат с JWT авторизацией (ДЗ №10)
 
-Домашнее задание: полнофункциональный групповой веб-чат в реальном времени через протокол **WebSocket** с регистрацией, авторизацией и выходом по **JWT** (access / refresh токены), защитой чата от неавторизованных пользователей и автоматическим деплоем на **GitHub Pages** через **GitHub Actions**.
+Домашнее задание №10: полнофункциональный групповой веб-чат в реальном времени через протокол **WebSocket** с регистрацией, авторизацией и выходом по **JWT** (access / refresh токены), защитой чата от неавторизованных пользователей и автоматическим деплоем на **GitHub Pages** через **GitHub Actions**.
 
-- 🌐 **Демо (GitHub Pages):** [https://akylbek0k.github.io/dz9/](https://akylbek0k.github.io/dz9/) *(после создания репозитория и деплоя)*
+- 🌐 **Демо (GitHub Pages):** [https://akylbek0k.github.io/dz10/](https://akylbek0k.github.io/dz10/)
 - 📖 **Swagger REST API:** [https://inai-col3.fishrungames.com/api/docs/](https://inai-col3.fishrungames.com/api/docs/)
 - ⚡ **WebSocket Gateway:** `wss://inai-col3.fishrungames.com/chat/`
 
@@ -13,7 +13,7 @@
 ### 1. Авторизация по JWT (Access + Refresh)
 - **Регистрация (`POST /api/register/`)**:
   - Валидация логина по правилам бэкенда (`^[\w.@+-]+$`, до 150 символов).
-  - Пароль от 6 символов, повтор пароля.
+  - Пароль от 6 символов, валидация совпадения паролей.
   - Мгновенное получение access-токена в ответе и refresh-токена в `HttpOnly` cookie.
 - **Вход в систему (`POST /api/login/`)**:
   - Аутентификация пользователя, сохранение access токена и профиля.
@@ -96,8 +96,8 @@
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/akylbek0k/dz9.git
-   cd dz9
+   git clone https://github.com/akylbek0k/dz10.git
+   cd dz10
    ```
 
 2. Установите зависимости:
